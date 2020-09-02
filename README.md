@@ -34,6 +34,7 @@ cd school-sensor-web
 
 Before you can run the sensor.py you need to install Adafruit (the python library used for this sensor).
 ```shell script
+git clone https://adafruit/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT
 sudo python setup.py install
 ```
