@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<h1><u>Sensor Data</u></h1>
+
+{{ if .Err }}
+    <strong>Error reading data:</strong> {{ .Err }}
+{{ else }}
+    {{ range $key, $value := .Data }}
+        <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+    {{ end }}
+{{ end }}
+
+<br>
+<br>
+<a href="https://github.com/robinbraemer/school-sensor-web">go to the project code</a>
+</body>
+</html>
