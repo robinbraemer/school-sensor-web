@@ -37,7 +37,10 @@ Before you can run the sensor.py you need to install Adafruit (the python librar
 git clone https://adafruit/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT
 sudo python setup.py install
+rm -r Adafruit_Python_DHT
 ```
+Make sure to remove it again since we don't want the sensor code to
+import the directory but from the installed python packages.
 
 Go back to the project directory with `cd ..`.
 
@@ -70,7 +73,7 @@ go run web.go
 ```
 
 The website is reachable from http://localhost:8080.
-You can the available flags with `go run web.go -h`.
+You can see the available flags with `go run web.go -h`.
 
 For example we can serve the website on the default http port 80 with:
 ```shell script
